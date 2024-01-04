@@ -1,6 +1,7 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/b8Jjz3kB)
+# Project Overview
+This project involves developing a comprehensive web application. The backend is powered by Django and a PostgreSQL database, while the frontend utilizes Angular. This guide provides detailed instructions on setting up and running the project.
 
-# OKC Technical Project Deliverable
+# Project Deliverables
 
 ### 1. Backend Engineering
 
@@ -10,7 +11,7 @@
 
 * In the programming language of your choice, write a process to load the dataset into your PostgreSQL database. Ensure that this process can run repeatedly without duplicating or obscuring references in the database. Include the source code of your process in the `backend/scripts` folder. Note: You can feel free to utilize the power of Django models and migrations to achieve this step.
 
-* After loading the data, export the state of your database using `pg_dump -U okcapplicant okc > dbexport.pgsql`. Include `dbexport.psql` in the `backend/scripts` folder.
+* After loading the data, export the state of your database in the `backend/scripts` folder.
 
 * The skeleton of an API View `PlayerSummary` can be found in `backend/app/views/players.py`. Implement this API to return a player summary that mimics the structure of `backend/app/views/sample_response/sample_response.json`. Feel free to import additional modules/libraries in order to do this, but ensure that the `backend/requirements.txt` is updated accordingly. Viewing http://localhost:4200/player-summary-api allows you to see the output of your API, given the playerID parameter provided in the user input.
 
@@ -24,24 +25,6 @@
 * Within the `player-summary` component found in `frontend/src/app/player-summary/`, create an interface that describes the player summary data returned from the API.
 
 * Feel free to import additional modules of your choice, and design the interface however you wish. Just make sure that the `package.json` and `package-lock.json` are updated accordingly.
-
-
-# Application Setup
-In order to complete the Backend Engineering or Frontend Engineering deliverables, you will need to do all of the following setup items. Please follow the instructions below, from top to bottom sequentially, to ensure that you are set up to run the app. The app is run on an Angular frontend, Django backend, and a PostgreSQL database.
-
-## Set up database
-1. Download and install PostgreSQL from https://www.postgresql.org/download/
-2. Ensure PostgreSQL is running, and in a terminal run
-    ```
-    createuser okcapplicant --createdb;
-    createdb okc;
-    ```
-3. connect to the okc database to grant permissions `psql okc`
-    ```
-    create schema app;
-    alter user okcapplicant with password 'thunder';
-    grant all on schema app to okcapplicant;
-    ```
 
 
 ## Backend
@@ -91,11 +74,3 @@ npm start
 ```
 The frontend should run on http://localhost:4200/. Visit this address to see the app in your browser.
 
-
-# SUBMISSION.md
-Please fill out the SUBMISSION.md file to ensure we have your name attached to the project.
-
-
-# Questions?
-
-Email datasolutions@okcthunder.com
